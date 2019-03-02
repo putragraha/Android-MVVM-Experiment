@@ -14,7 +14,7 @@ import com.android.nsystem.mvvmexperiment.entity.Task;
 
 public class TaskAdapter extends ListAdapter<Task, TaskAdapter.TaskHolder> {
 
-    private OnItemClickListener listener;
+    private OnItemClickListener mListener;
 
     private static final DiffUtil.ItemCallback<Task> DIFF_CALLBACK = new DiffUtil.ItemCallback<Task>() {
         @Override
@@ -33,7 +33,7 @@ public class TaskAdapter extends ListAdapter<Task, TaskAdapter.TaskHolder> {
     }
 
     public void setOnItemClickListener(OnItemClickListener listener) {
-        this.listener = listener;
+        this.mListener = listener;
     }
 
     @NonNull
@@ -65,7 +65,7 @@ public class TaskAdapter extends ListAdapter<Task, TaskAdapter.TaskHolder> {
                 @Override
                 public void onClick(View view) {
                     int position = getAdapterPosition();
-                    listener.onItemClick(getItem(position));
+                    mListener.onItemClick(getItem(position));
                 }
             });
         }

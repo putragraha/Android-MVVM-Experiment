@@ -15,21 +15,21 @@ public class TaskFormActivity extends AppCompatActivity {
     public static final String EXTRA_ID = "com.android.nsystem.mvvmexperiment.activity.EXTRA_ID";
     public static final String EXTRA_DESCRIPTION = "com.android.nsystem.mvvmexperiment.activity.EXTRA_DESCRIPTION";
 
-    private EditText descriptionEditText;
+    private EditText mDescriptionEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_task);
 
-        descriptionEditText = findViewById(R.id.edit_text_description);
+        mDescriptionEditText = findViewById(R.id.edit_text_description);
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_close);
 
         if (getIntent().hasExtra(EXTRA_ID)) {
             setTitle("Edit Task");
             String description = getIntent().getStringExtra(EXTRA_DESCRIPTION);
-            descriptionEditText.setText(description);
+            mDescriptionEditText.setText(description);
         } else {
             setTitle("New Task");
         }
@@ -44,7 +44,7 @@ public class TaskFormActivity extends AppCompatActivity {
     }
 
     private void saveTask() {
-        String description = descriptionEditText.getText().toString();
+        String description = mDescriptionEditText.getText().toString();
         if (description.trim().isEmpty()) {
             Toast.makeText(this, "Please fill in your task", Toast.LENGTH_LONG).show();
         } else {
