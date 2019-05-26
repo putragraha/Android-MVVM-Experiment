@@ -3,7 +3,7 @@ An Experimental To Do List Android Application which implementing MVVM Architect
  
 ## Explanation
 ### MVVM
-An architecture pattern to ease maintain and scale code. The way it work is rather different than **MVC** and **MVP**, **MVVM** is binding it's component in one direction, e.g. _View_ bind _ViewModel_, but not vice versa. Then, how would _View_ get information from _Model_ if _ViewModel_ did not bind it's _View_? The answer is _View_ observing _ViewModel_, so then _View_ will get realtime update on data changed 
+An architecture pattern to ease maintain and scale code. The way it work is rather different than **MVC** and **MVP**. **MVVM** is binding it's component in one direction, e.g. _View_ bind _ViewModel_, but not vice versa. Then, how would _View_ get information from _Model_ if _ViewModel_ did not bind it's _View_? The answer is _View_ observing _LiveData_ (Data Binding which get data from Model), so then _View_ will get realtime update on data changed 
 
 ## Features & Notes:
 - Simple CRUD operation on To Do List
