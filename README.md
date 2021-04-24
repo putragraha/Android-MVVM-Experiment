@@ -11,6 +11,7 @@ An architecture pattern to ease maintain and scale code. The way it work is rath
 ## Tech Stack:
 - Java Language
 - Android SDK Version : 28
+- Room 
 - UI : Card View, add following implementation to app build.gradle
 ```
 def android_support_version = "28.0.0"
